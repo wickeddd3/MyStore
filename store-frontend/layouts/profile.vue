@@ -3,7 +3,7 @@
   <navbar></navbar>
   <div class="container is-widescreen">
     <div class="columns my-1">
-      <div class="column is-3">
+      <div class="column is-2">
         <b-menu>
           <b-menu-list label="Account">
             <b-menu-item label="My Profile" tag="router-link" :to="{ path: '/profile/myprofile' }"></b-menu-item>
@@ -18,7 +18,7 @@
           </b-menu-list>
         </b-menu>
       </div>
-      <div class="column is-9">
+      <div class="column is-10">
         <nuxt />
       </div>
     </div>

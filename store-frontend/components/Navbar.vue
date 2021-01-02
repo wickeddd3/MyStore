@@ -52,6 +52,9 @@
             <b-navbar-item tag="router-link" :to="{ path: '/profile/wishlists' }">
                 My Wishlists
             </b-navbar-item>
+            <b-navbar-item tag="router-link" :to="{ path: '/admin' }">
+                Admin Panel
+            </b-navbar-item>
             <b-navbar-item>
                 Sign Out
             </b-navbar-item>
