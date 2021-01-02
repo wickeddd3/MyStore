@@ -1,53 +1,32 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
-      <card
-        title="Free"
-        icon="github"
-      >
-        Open source on <a href="https://github.com/buefy/buefy">
-          GitHub
-        </a>
-      </card>
-
-      <card
-        title="Responsive"
-        icon="cellphone-link"
-      >
-        <b class="has-text-grey">
-          Every
-        </b> component is responsive
-      </card>
-
-      <card
-        title="Modern"
-        icon="alert-decagram"
-      >
-        Built with <a href="https://vuejs.org/">
-          Vue.js
-        </a> and <a href="http://bulma.io/">
-          Bulma
-        </a>
-      </card>
-
-      <card
-        title="Lightweight"
-        icon="arrange-bring-to-front"
-      >
-        No other internal dependency
-      </card>
-    </div>
-  </section>
+<div class="container">
+  <div class="container my-4">
+    <h4 class="title is-4">Sale Products</h4>
+    <sale-products></sale-products>
+  </div>
+  <div class="container my-4">
+    <h4 class="title is-4">Featured Categories</h4>
+    <featured-categories></featured-categories>
+  </div>
+  <div class="container my-4">
+    <h4 class="title is-4">Featured Products</h4>
+    <featured-products></featured-products>
+  </div>
+</div>
 </template>
 
 <script>
-import Card from '~/components/Card'
+import SaleProducts from '@/components/SaleProducts'
+import FeaturedCategories from '@/components/FeaturedCategories'
+import FeaturedProducts from '@/components/FeaturedProducts'
 
 export default {
-  name: 'HomePage',
+  layout: 'main',
 
   components: {
-    Card
+    SaleProducts,
+    FeaturedCategories,
+    FeaturedProducts
   }
 }
 </script>
