@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/connect', function () {
+    return 'web spa connected';
+});
+
+
+Route::resource('category', CategoryController::class);
+Route::resource('brand', BrandController::class);
+Route::resource('product', ProductController::class);
+
+Route::post('/order/placeorder', 'OrderController@store');

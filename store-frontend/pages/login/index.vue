@@ -11,7 +11,7 @@
     </a>
   </header>
   <div class="card-content">
-    <b-field label="Email">
+    <b-field label="E-Mail">
         <b-input
           type="email"
           value="">
@@ -25,14 +25,27 @@
     </b-field>
   </div>
   <footer class="card-footer">
-    <a href="#" class="card-footer-item">Cancel</a>
-    <a href="#" class="card-footer-item">Login</a>
+    <a class="card-footer-item">Cancel</a>
+    <a class="card-footer-item" @click="login">Login</a>
   </footer>
 </div>
 </template>
 
 <script>
 export default {
-  layout: 'auth'
+  layout: 'auth',
+
+  mounted() {
+    this.$axios.$get('/sanctum/csrf-cookie');
+  },
+
+  methods: {
+    async login() {
+      await this.$axios.$get('/connect')
+                .then(res => {
+                  console.log(res)
+                })
+    }
+  }
 }
 </script>
