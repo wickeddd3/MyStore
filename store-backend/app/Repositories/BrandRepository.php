@@ -16,7 +16,7 @@ class BrandRepository implements BrandRepositoryInterface
 
     public function index()
     {
-        return $this->brand->all();
+        return $this->brand->paginate(10);
     }
 
     public function store($request)

@@ -24,9 +24,9 @@ class CategoryStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'form.name' => 'required|max:255|unique:categories,name',
-            'form.slug' => 'required|max:255|unique:categories,slug',
-            'form.parent' => 'required|exists:categories,id',
+            'name' => 'required|max:255|unique:categories,name',
+            'slug' => 'required|max:255|unique:categories,slug',
+            'parent' => 'exists:categories,id',
         ];
     }
 
@@ -39,16 +39,15 @@ class CategoryStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'form.name.required' => 'Name is required',
-            'form.name.max' => 'Name has maximum of 255 characters only.',
-            'form.name.unique' => 'Name already exist',
+            'name.required' => 'Name is required',
+            'name.max' => 'Name has maximum of 255 characters only.',
+            'name.unique' => 'Name already exist',
 
-            'form.slug.required' => 'Slug is required',
-            'form.slug.max' => 'Slug has maximum of 255 characters only.',
-            'form.slug.unique' => 'Slug already exist',
+            'slug.required' => 'Slug is required',
+            'slug.max' => 'Slug has maximum of 255 characters only.',
+            'slug.unique' => 'Slug already exist',
 
-            'form.parent.required' => 'Parent Category is required',
-            'form.parent.exists' => 'Category not exist.',
+            'parent.exists' => 'Category not exist.',
         ];
     }
 }

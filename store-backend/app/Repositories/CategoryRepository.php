@@ -16,12 +16,15 @@ class CategoryRepository implements CategoryRepositoryInterface
 
     public function index()
     {
-        return $this->category->all();
+        return $this->category->paginate(10);
     }
 
     public function store($request)
     {
-        $this->category->create($request);
+        $this->category->create([
+            'name' => $request['name'],
+            'slug' => $request['slug']
+        ]);
     }
 
     public function update()

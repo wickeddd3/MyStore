@@ -18,7 +18,6 @@ class CreateProductsTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('brand_id');
             $table->string('sku')->unique();
-            $table->string('brand');
             $table->string('name')->unique();
             $table->string('slug')->unique();
             $table->text('description')->nullable();
@@ -27,6 +26,7 @@ class CreateProductsTable extends Migration
             $table->integer('discount')->nullable();
             $table->string('status')->nullable();
             $table->integer('ratings')->default(0);
+            $table->integer('image_id')->nullable();
             $table->timestamps();
         });
     }

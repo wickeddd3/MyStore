@@ -14,12 +14,13 @@ class BrandController extends Controller
     {
         $this->brandRepository = $brandRepository;
 
-        $this->middleware(['auth']);
+        // $this->middleware(['auth']);
     }
 
     public function index()
     {
-        return $this->brandRepository->index();
+        // return $this->brandRepository->index();
+        return view('pages.brands.index');
     }
 
     public function create()

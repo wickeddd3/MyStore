@@ -14,12 +14,13 @@ class CategoryController extends Controller
     {
         $this->categoryRepository = $categoryRepository;
 
-        $this->middleware(['auth']);
+        // $this->middleware(['auth']);
     }
 
     public function index()
     {
-        return $this->categoryRepository->index();
+        // return $this->categoryRepository->index();
+        return view('pages.categories.index');
     }
 
     public function create()

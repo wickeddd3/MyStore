@@ -24,14 +24,14 @@ class ProductStoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'form.category' => 'required|exists:categories,id',
-            'form.brand' => 'required|exists:brands,id',
-            'form.sku' => 'required|max:255|unique:products,sku',
-            'form.brand' => 'required|max:255',
-            'form.name' => 'required|max:255|unique:products,name',
-            'form.slug' => 'required|max:255|unique:products,slug',
-            'form.price' => 'required|numeric',
-            'form.sale_price' => 'required|numeric'
+            'category' => 'required|exists:categories,id',
+            'brand' => 'required|exists:brands,id',
+            'sku' => 'required|max:255|unique:products,sku',
+            'brand' => 'required|max:255',
+            'name' => 'required|max:255|unique:products,name',
+            'slug' => 'required|max:255|unique:products,slug',
+            'price' => 'required|numeric',
+            'sale_price' => 'required|numeric'
         ];
     }
 
@@ -44,32 +44,32 @@ class ProductStoreRequest extends FormRequest
     public function messages()
     {
         return [
-            'form.category.required' => 'Category is required',
-            'form.category.exists' => 'Category not exist',
+            'category.required' => 'Category is required',
+            'category.exists' => 'Category not exist',
 
-            'form.brand.required' => 'Brand is required',
-            'form.brand.exists' => 'Brand not exist',
+            'brand.required' => 'Brand is required',
+            'brand.exists' => 'Brand not exist',
 
-            'form.sku.required' => 'SKU is required.',
-            'form.sku.max' => 'SKU has maximum of 255 characters only.',
-            'form.sku.unique' => 'SKU already exist.',
+            'sku.required' => 'SKU is required.',
+            'sku.max' => 'SKU has maximum of 255 characters only.',
+            'sku.unique' => 'SKU already exist.',
 
-            'form.brand.required' => 'Brand is required.',
-            'form.brand.max' => 'Brand has maximum of 255 characters only.',
+            'brand.required' => 'Brand is required.',
+            'brand.max' => 'Brand has maximum of 255 characters only.',
 
-            'form.name.required' => 'Name is required.',
-            'form.name.max' => 'Name has maximum of 255 characters only.',
-            'form.name.unique' => 'Name already exist.',
+            'name.required' => 'Name is required.',
+            'name.max' => 'Name has maximum of 255 characters only.',
+            'name.unique' => 'Name already exist.',
 
-            'form.slug.required' => 'Slug is required.',
-            'form.slug.max' => 'Slug has maximum of 255 characters only.',
-            'form.slug.unique' => 'Slug already exist.',
+            'slug.required' => 'Slug is required.',
+            'slug.max' => 'Slug has maximum of 255 characters only.',
+            'slug.unique' => 'Slug already exist.',
 
-            'form.price.required' => 'Price is required.',
-            'form.price.numeric' => 'Price must be numeric.',
+            'price.required' => 'Price is required.',
+            'price.numeric' => 'Price must be numeric.',
 
-            'form.sale_price.required' => 'Sale Price is required.',
-            'form.sale_price.numeric' => 'Sale Price must be numeric.',
+            'sale_price.required' => 'Sale Price is required.',
+            'sale_price.numeric' => 'Sale Price must be numeric.',
         ];
     }
 }

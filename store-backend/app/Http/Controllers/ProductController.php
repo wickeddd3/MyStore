@@ -14,12 +14,13 @@ class ProductController extends Controller
     {
         $this->productRepository = $productRepository;
 
-        $this->middleware(['auth']);
+        // $this->middleware(['auth']);
     }
 
     public function index()
     {
-        return $this->productRepository->index();
+        // return $this->productRepository->index();
+        return view('pages.products.index');
     }
 
     public function create()

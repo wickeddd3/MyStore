@@ -14,7 +14,12 @@ class OrderController extends Controller
     {
         $this->orderRepository = $orderRepository;
 
-        $this->middleware(['auth']);
+        // $this->middleware(['auth']);
+    }
+
+    public function index()
+    {
+        return view('pages.orders.index');
     }
 
     public function store(OrderStoreRequest $request)

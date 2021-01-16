@@ -26,3 +26,15 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+
+import Vue from 'vue'
+window.Vue = require('vue');
+
+import Buefy from 'buefy'
+// import 'buefy/dist/buefy.css'
+
+Vue.use(Buefy)
+
+// Material Design Icons
+import '@mdi/font/css/materialdesignicons.css'
